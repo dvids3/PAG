@@ -12,3 +12,378 @@
 body {
     font-family: 'Train One' , sans-serif;  
   }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    background: linear-gradient(
+        90deg,
+        rgba(241, 237, 220, 1) 0%,
+        rgba(255, 255, 253, 1) 50%,
+        rgba(252, 246, 232, 1) 100%
+        );
+        padding: 70px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    color: #FF3C2A;
+    text-transform: upperae;
+    font-weight: 800;
+}
+
+.menu .navbar li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #1111;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #FF3C2A;  
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icon {
+    width: 25px;
+}
+
+.menu label{
+  cursor: pointer;
+  display: none;
+}
+
+.submenu #subcarrito {
+    position: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4e4b5076;
+    padding: 20px;
+    min-width: 400px;  
+}
+
+table {
+    width: 100%;   
+}
+
+th, td {
+  color: #ff0000;
+}
+
+.borrar {
+    background-color: #FF3C2A;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.header-txt {
+  flex: 40%;
+}
+
+.header-txt h1 {
+    font-size: 70px;
+    line-height: 1;
+    color: #181818;
+    text-transform: uppercase;
+    margin-bottom: 25%;
+}
+
+p {
+    font-size: 18px;
+    color: #484848;
+    margin-bottom: 25px;
+}
+
+.btn-1, .btn-3 {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #FF3C2A;
+    border: 2px solid #FF3C2A;
+    text-transform: capitalize;
+    border-radius: 15px;
+}
+
+.btn-1:hover, .btn-3:hover {
+    background-color: #FF3C2A;
+    color: #ffffff;
+}
+
+.header-img {
+    flex: 60%;
+}
+
+.oferts {
+   padding: 100px 0;
+}
+
+h2 {
+    font-size: 40px;
+    color: #181818;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.oferts-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.ofert-1{
+  flex-basis: calc(30% - 30px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  background-color: #f7fafa;
+  border-radius: 10px;
+}
+
+.ofert-1 img {
+    width: 130px;
+    height: 170px;  
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.products-txt {
+    margin-bottom: 10px;
+}
+
+.precio {
+    color: #FF3C2A;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.btn-3 {
+  padding: 4px 20px;
+}
+
+.logan-1 {
+  flex-basis: 40%;
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0.2)
+  ),
+  url(Buzos/buzo-banana.jpg);
+  background-position: center-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.logan-1 h3 {
+    color: #ffffff;
+    font-size: 3cqh;
+    text-transform: uppercase; 
+}
+
+.logan-1 p {
+    color: #f7f7f7;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-2 {
+  display: inline-block;
+  padding: 8px 30px; 
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.promocion {
+  padding: 80px 0;
+  background-color: #f7f7f7;
+}
+
+.promocion-content {
+  display: flex;
+}
+
+.promocion-txt {
+  flex-basis: 50%;
+}
+
+.promocion-img {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.promocion-img img {
+  width: 250px;
+}
+
+.product {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: repeat(300px, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.bloog {
+  padding: 100px 0 100px 0;
+}
+
+.bloog-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bloog-1 {
+  flex-basis: calc(33.3% - 30px);
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.bloog-txt {
+  padding: 40%;
+}
+.btn-4 {
+  display: inline-block;
+  padding: 8px 25px;
+  color: #181818;
+  border: 2px solid #181818;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.footer {
+  padding: 50px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link h3 {
+  font-size: 17px;
+  color: #181818;
+  margin-bottom: 10px;
+}
+
+.link a {
+  display: block;
+  color: #181818;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.link a:hover {
+  color: #FF3C2A;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    display: initial;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ff900f;
+    display: none;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  #menu:checked ~ {
+    display: initial;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menu .navbar ul li a:hover {
+    color: #ffffff;
+  }
+
+  .header {
+    min-height: 0vh;
+    padding: 100px 30px 50px 30px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-txt {
+    margin-bottom: 25px;
+  }
+
+  .oferts {
+    padding: 30px;
+  }
+
+  .oferts-content {
+    flex-direction: column;
+  }
+
+  
+ } 
