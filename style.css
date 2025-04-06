@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bungee+Tint&family=Eater&family=Playfair+Display:ital@1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sankofa+Display&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
 * {
   margin: 0;
@@ -10,24 +10,22 @@
 }
 
 body {
-    font-family: 'Train One' , sans-serif;  
+    font-family: 'Playfair' , sans-serif;  
   }
 
 img {
     max-width: 100%;
-    height: auto;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .header {
     display: flex;
     align-items: center;
-    min-height: 80px;
+    min-height: 80vh;
     background: linear-gradient(
         90deg,
         rgba(241, 237, 220, 1) 0%,
@@ -38,6 +36,7 @@ img {
 }
 
 .menu {
+    color: #060a2e;
     position: absolute;
     top: 0;
     left: 0;
@@ -47,27 +46,31 @@ img {
     justify-content: space-between;
 }
 
+.navbar {
+  color: #181818;
+}
+
 .logo {
     font-size: 25px;
     color: #FF3C2A;
-    text-transform: upperae;
+    text-transform: uppercase;
     font-weight: 800;
 }
 
-.menu .navbar li {
+.menu .navbar ul li {
     position: relative;
     float: left;
 }
 
 .menu .navbar ul li a {
     font-size: 18px;
-    padding: 20px;
-    color: #1111;
+    padding: 30px;
+    color: #fe7373;
     display: block;
 }
 
 .menu .navbar ul li a:hover {
-    color: #FF3C2A;  
+    color: #f91500;  
 }
 
 #menu {
@@ -83,8 +86,12 @@ img {
   display: none;
 }
 
-.submenu #subcarrito {
-    position: none;
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
 }
 
 .submenu:hover #carrito {
@@ -104,7 +111,7 @@ table {
 }
 
 th, td {
-  color: #ff0000;
+  color: #ffffff;
 }
 
 .borrar {
@@ -123,7 +130,7 @@ th, td {
 }
 
 .header-txt {
-  flex: 40%;
+  flex-basis: 40%;
 }
 
 .header-txt h1 {
@@ -155,7 +162,7 @@ p {
 }
 
 .header-img {
-    flex: 60%;
+    flex-basis: 60%;
 }
 
 .oferts {
@@ -180,6 +187,7 @@ h2 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 25px;
   background-color: #f7fafa;
+  text-align: center;
   border-radius: 10px;
 }
 
@@ -226,7 +234,7 @@ h3 {
 
 .logan-1 h3 {
     color: #ffffff;
-    font-size: 3cqh;
+    font-size: 30px;
     text-transform: uppercase; 
 }
 
@@ -244,25 +252,25 @@ h3 {
   color: #ffffff;
 }
 
-.promocion {
+.promotion {
   padding: 80px 0;
   background-color: #f7f7f7;
 }
 
-.promocion-content {
+.promotion-content {
   display: flex;
 }
 
-.promocion-txt {
+.promotion-txt {
   flex-basis: 50%;
 }
 
-.promocion-img {
+.promotion-img {
   flex-basis: 50%;
   text-align: center;
 }
 
-.promocion-img img {
+.promotion-img img {
   width: 250px;
 }
 
@@ -271,25 +279,22 @@ h3 {
   text-align: center;
 }
 
-.product-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
+
 
 .product-content {
   display: grid;
-  grid-template-columns: repeat(300px, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 50px;
 }
 
 .bloog {
-  padding: 100px 0 100px 0;
+  padding: 50px 0 100px 0;
 }
 
 .bloog-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .bloog-1 {
@@ -299,13 +304,13 @@ h3 {
 }
 
 .bloog-txt {
-  padding: 40%;
+  padding: 40px;
 }
 .btn-4 {
   display: inline-block;
   padding: 8px 25px;
   color: #181818;
-  border: 2px solid #181818;
+  border: 1px solid #181818;
   text-transform: capitalize;
   font-size: 17px;
 }
@@ -385,5 +390,54 @@ h3 {
     flex-direction: column;
   }
 
-  
+
+  .ofert-1 {
+    margin-bottom: 30px;
+  }
+
+
+  .logan-1 {
+    order: -2;
+    margin-bottom: 30px;
+  }
+
+  .promocion {
+    padding: 30px;
+  }
+
+  .promocion-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promocion-txt {
+    margin-bottom: 25px;
+  }
+
+  .promocion-img img{
+    width: 200px;
+  }
+
+  .product {
+    padding: 30px;
+  }
+
+  .product-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+
+  .bloog {
+    padding: 30px;
+  }
+
+  .bloog-content {
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 30px;
+    flex-direction: column;
+    text-align: center;
+  }
  } 
