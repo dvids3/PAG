@@ -28,15 +28,15 @@ img {
     min-height: 80vh;
     background: linear-gradient(
         90deg,
-        rgba(241, 237, 220, 1) 0%,
-        rgba(255, 255, 253, 1) 50%,
-        rgba(252, 246, 232, 1) 100%
+        rgba(0, 70, 67) 0%,
+        rgba(0, 70, 67, 1) 50%,
+        rgba(0, 70, 67, 1) 100%
         );
         padding: 70px 0;
 }
 
 .menu {
-    color: #060a2e;
+    color: #abd1c6;
     position: absolute;
     top: 0;
     left: 0;
