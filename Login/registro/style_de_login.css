@@ -103,6 +103,26 @@ form a {
     font-family: 'Playfair', sans-serif;
 }
 
+input:invalid {
+  border-bottom: 2px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;  
+  display: block;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 5px; 
+}
+
+.input-container input {
+  margin-bottom: 3px; 
+}
+
 @media(max-width: 991px) {
 
     body {

@@ -1,4 +1,4 @@
-<html lang="es">
+<html lang="es"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +8,35 @@
 </head>
 <body>
 
-    <form action="form-login">
+    <form id="form-login" action="#" novalidate>
 
         <img src="imagenes_login/logo.svg" alt="">
 
         <div class="input-group">
 
             <div class="input-container">
-                <input type="txt"  placeholder="Nombre">
+                <input type="text" id="nombre" placeholder="Nombre" required>
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="input-container">
-                <input type="password"  placeholder="Contraseña">
+                <input type="password" id="password" placeholder="Contraseña" required>
                 <i class="fa-solid fa-lock"></i>
             </div>
             <div class="input-container">
-                <input type="email"  placeholder="correo">
+                <input type="email" id="correo" placeholder="correo" required>
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="input-container">
-                <input type="tel"  placeholder="telefono">
+                <input type="tel" id="telefono" placeholder="telefono" required>
                 <i class="fa-solid fa-phone"></i>
             </div>
             
-            <a href="login.htm">Ya tienes cuenta iniciar sesión</a>
+            <a href="iniciar.htm">Ya tienes cuenta iniciar sesión</a>
             <input class="btn" type="submit" value="Acceder">
 
         </div>
 
     </form>
-    
+    <script src="Error_de_inicio.js"></script>
 </body>
 </html>

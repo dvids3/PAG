@@ -58,3 +58,4 @@ function vaciarCarrito() {
         lista.removeChild(lista.firstChild);
     }
 }
+  
