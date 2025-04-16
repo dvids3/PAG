@@ -59,3 +59,53 @@ function vaciarCarrito() {
     }
 }
   
+document.addEventListener('DOMContentLoaded', () => {
+    const btnServicios = document.getElementById('btn-servicios');
+    const tooltip = document.getElementById('tooltip-servicios');
+
+    btnServicios.addEventListener('click', (e) => {
+        e.preventDefault();
+        tooltip.classList.toggle('oculto');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!btnServicios.contains(e.target) && !tooltip.contains(e.target)) {
+            tooltip.classList.add('oculto');
+        }
+    });
+});
+
+const btnContacto = document.getElementById('btn-contacto');
+const tooltipContacto = document.getElementById('tooltip-contacto');
+
+btnContacto.addEventListener('click', (e) => {
+    e.preventDefault();
+    tooltipContacto.classList.toggle('oculto');
+});
+
+document.addEventListener('click', (e) => {
+    if (!btnContacto.contains(e.target) && !tooltipContacto.contains(e.target)) {
+        tooltipContacto.classList.add('oculto');
+    }
+});
+
+function copiarTexto(id) {
+    const texto = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+            alert('Copiado al portapapeles: ' + texto);
+        })
+        .catch(err => {
+            console.error('Error al copiar:', err);
+        });
+}
+
+  const logoSticky = document.getElementById("logoSticky");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      logoSticky.classList.add("visible");
+    } else {
+      logoSticky.classList.remove("visible");
+    }
+  });
+
