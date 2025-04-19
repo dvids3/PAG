@@ -1,4 +1,3 @@
-const carrito = document.getElementById("carrito");
 const elemetos1 = document.getElementById("lista-1");
 const elemetos2 = document.getElementById("lista-2");
 const lista = document.querySelector("#lista-carrito tbody");
@@ -9,7 +8,7 @@ cargareventListeners();
 function cargareventListeners() {
   elemetos1.addEventListener("click", comprarElemento);
   elemetos2.addEventListener("click", comprarElemento);
-  carrito.addEventListener("click", eliminarElemento);
+  document.getElementById("carrito-modal").addEventListener("click", eliminarElemento);
   vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
 }
 
@@ -40,7 +39,21 @@ function insertarCarrito(Elemento) {
         <td><a href="#" class="borrar" data-id="${Elemento.id}">X</a></td>
     `;
     lista.appendChild(row);
+    actualizarContador();
 }
+
+function actualizarContador() {
+    const contador = document.getElementById("contador-carrito");
+    const totalItems = lista.querySelectorAll("tr").length;
+  
+    if (totalItems > 0) {
+      contador.textContent = totalItems;
+      contador.style.display = "inline-block";
+    } else {
+      contador.style.display = "none";
+    }
+  }
+  
 
 function eliminarElemento(e) {
     e.preventDefault();
@@ -51,12 +64,14 @@ function eliminarElemento(e) {
         elemento = e.target.parentElement.parentElement;
         elementoId = elemento.querySelector("a").getAttribute("data-id");
     }
+    actualizarContador();
 }
 
 function vaciarCarrito() {
     while (lista.firstChild) {
         lista.removeChild(lista.firstChild);
     }
+    actualizarContador();
 }
   
 document.addEventListener('DOMContentLoaded', () => {
@@ -108,4 +123,49 @@ function copiarTexto(id) {
       logoSticky.classList.remove("visible");
     }
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const carritoIcon = document.getElementById("img-carrito");
+    const modal = document.getElementById("carrito-modal");
+    const cerrarModal = document.getElementById("cerrar-modal");
+  
+    carritoIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.classList.remove("oculto");
+    });
+  
+    cerrarModal.addEventListener("click", () => {
+      modal.classList.add("oculto");
+    });
+  
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("oculto");
+      }
+    });
+  });
+
+  const botonesInfo = document.querySelectorAll('.abrir-info');
+  const modalInfo = document.getElementById('info-modal');
+  const textoInfo = document.getElementById('info-texto');
+  const cerrarInfo = document.getElementById('cerrar-info-modal');
+  
+  botonesInfo.forEach(boton => {
+    boton.addEventListener('click', e => {
+      e.preventDefault();
+      const textoBoton = boton.getAttribute('data-texto');
+      textoInfo.textContent = textoBoton;
+      modalInfo.classList.remove('oculto');
+      logoSticky.style.display = 'none'; // Oculta la barra amarilla
+    });
+  });
+  
+  cerrarInfo.addEventListener('click', () => {
+    modalInfo.classList.add('oculto');
+    if (window.scrollY > 100) {
+      logoSticky.style.display = 'flex'; // Vuelve a mostrar si debe estar visible
+    }
+  });
+  
+
 

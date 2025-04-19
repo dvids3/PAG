@@ -5,24 +5,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="style_de_index.css">
 </head>
-<body>
+<body id="top">
 
-    <div id="logoSticky" class="logo-sticky">ONE CROIX</div>
+    <div id="logoSticky" class="logo-sticky">
+        <div class="logo-placeholder"></div>
+        <div class="logo-text">ONE CROIX</div>
+        <a href="#top" class="inicio-btn">INICIO</a>
+    </div>
 
+    <div id="info-modal" class="info-modal oculto">
+        <div class="info-modal-content">
+        <span id="cerrar-info-modal" class="cerrar-info">X</span>
+        <img id="info-imagen" src="images/sol_.png" alt="Imagen informativa">
+        <div id="info-texto" class="info-texto"></div>
+        </div>
+    </div>
+    
     <header class="header">
                     
         <div class="menu container">    
-
             <a href="#" class="logo">ONE CROIX</a>
-            <input type="checkbox" id="menu">
+            <input type="checkbox" id="menu" aria-label="Abrir menu de navegacion">
             <label for="menu">
-                <img src="images/menu.png" alt="menu">
-                    <li class="submenu">            
+                <img src="images/menu.png" alt="menu">          
             </label>
             <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
 
+                <ul>
                     <li class="submenu">
                         <a href="#" id="btn-servicios">Servicios</a>
                         <div id="tooltip-servicios" class="tooltip oculto">
@@ -32,15 +41,17 @@
                       </li>
                       
                       <li class="submenu">
+
                         <a href="#" id="btn-contacto">Contacto</a>
                         <div id="tooltip-contacto" class="tooltip oculto">
-                          <p><strong>Teléfono:</strong> <span id="telefono">+57 300 123 4567</span>
+                          <p><strong>Teléfono:</strong> <span id="telefono"><br>323 598 8488<br></span>
                             <button onclick="copiarTexto('telefono')">📋</button>
                           </p>
                           <p><strong>Correo:</strong> <span id="correo">contacto@ejemplo.com</span>
                             <button onclick="copiarTexto('correo')">📋</button>
                           </p>
                         </div>
+
                       </li>
                       
                     <li><a href="../Login/registro/registro.htm">Registrarse</a></li>        
@@ -49,20 +60,27 @@
             <div>
                 <ul>
                     <li class="submenu">
-                        <img src="images/car.svg" id="img-carrito" alt="">
-                        <div id ="carrito">
-                            <table id="lista-carrito">
-                               <thead>
-                                <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th></th>
-                                </tr>
-                               </thead> 
-                               <tbody></tbody>
-                            </table>
-                            <a href="#" id="vaciar-carrito" class="btn-2" >Vaciar Carrito</a>
+                        <div class="carrito-wrapper">
+                            <img src="images/car.svg" id="img-carrito" alt="carrito">
+                            <span id="contador-carrito" class="contador">0</span>
+                        </div>
+                        <div id="carrito-modal" class="modal oculto">
+                            <div class="modal-content">
+                                <span class="cerrar-modal" id="cerrar-modal">x</span>
+                                <h2>Carrito de Compras</h2>
+                                    <table id="lista-carrito">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -71,38 +89,41 @@
 
         <div class="header-content container">
             <div class="header-txt">
+                <p class="subtitulo">¡Novedades de temporada!</p>
                 <h1>Ofertas Especiales</h1>
                 <p>
                 Estrena los mejores buzos de la temporada, con un 20% de descuento en tu primera compra.
                 </p>
                 <a href="#lista-1" class="btn-1">Ver Productos</a>
             </div>
+
             <div class="header-img">
-                <img src="Buzos/buzo.png_image.png" alt="buzo">
+                <img src="Buzos/buzo.png_image.png" alt="buzo" class="main-img">
                 <img src="images/cinta.com.png" alt="Cinta de peligro" class="danger-tape">
-            </div>
+              </div>              
         </div>
        
     </header>
 
-    "<section class="oferts container" id=lista-1>
-        <h2>Hoodies y Sacos </h2>
+    <section class="oferts container" id=lista-1>
+        <h2>Nuestros productos principales</h2>
         <p>
-            buzos de la mejor calidad 
+            Por ahi dicen que la mejor calidad...
         </p>
 
         <div class="oferts-content">
             <div class="ofert-1">
-                <img src="images/pr1.png" alt="">
+                <img src="Buzos/buzo_blanco.png" class="buzo-blanco" alt="buzo">
                 <div class="product-txt">
                     <h3>Buzo 1</h3>
                     <p>mejor calidad</p>
                     <p class="precio">100.000</p>
                     <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar</a>
                 </div>
-            </div> 
+            </div>
+            
             <div class="ofert-1">
-                <img src="images/pr2.png" alt="">
+                <img src="Buzos/buzo_gris.png" class="buzo-gris" alt="buzo">
                 <div class="product-txt">
                     <h3>Buzo 2</h3>
                     <p>mejor calidad</p>
@@ -110,22 +131,26 @@
                     <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar</a>
                 </div>
             </div> 
+
             <div class="logan-1">
                 <h3>Hoodies</h3>
                 <p>
-                    Productos
+                    -----------------
                 </p>
-                <a href="#" class="btn-2">Informacion</a>
+                <a href="#" class="btn-2 abrir-info" data-texto="">Información</a>
+
             </div>
-        </div>
+        </div>       
+
         <div class="oferts-content">
             <div class="logan-1">
-                <h3>Hoodies</h3>
+                <h3>Buzos</h3>
                 <p>
-                    Productos
+                    ------------
                 </p>
-                <a href="#" class="btn-2">Informacion</a>
-            </div>
+                <a href="#" class="btn-2 abrir-info" data-texto="Este es el texto para HOODIES">Información</a>
+
+            </div>            
             <div class="ofert-1">
                 <img src="images/pr3.png" alt="">
                 <div class="product-txt">
@@ -161,7 +186,7 @@
             </div>
 
             <div class="promotion-img">
-                    <img src="images/r1.png" alt="">
+                    <img src="images/r1.png" alt="Imagen">
             </div>
 
         </div>
@@ -184,6 +209,7 @@
                     <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar</a>
                 </div>
             </div>
+
             <div class="ofert-1">
                 <img src="images/2.png" alt="">
                 <div class="product-txt">
@@ -193,6 +219,7 @@
                     <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar</a>
                 </div>
             </div>
+
             <div class="ofert-1">
                 <img src="images/3.png" alt="">
                 <div class="product-txt">
@@ -202,6 +229,7 @@
                     <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar</a>
                 </div>
             </div>
+
             <div class="ofert-1">
                 <img src="images/4.png" alt="">
                 <div class="product-txt">
@@ -211,6 +239,7 @@
                     <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar</a>
                 </div>
             </div>
+
             <div class="ofert-1">
                 <img src="images/5.png" alt="">
                 <div class="product-txt">
@@ -220,6 +249,7 @@
                     <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar</a>
                 </div>
             </div>
+
             <div class="ofert-1">
                 <img src="images/6.png" alt="">
                 <div class="product-txt">
@@ -250,6 +280,7 @@
                     <a href="#" class="btn-4">Leer Más</a>
                 </div>
             </div>
+            
             <div class="bloog-1">
                 <img src="images/b2.jpg" alt="">
                 <div class="bloog-txt">
@@ -259,6 +290,7 @@
                     <a href="#" class="btn-4">Leer Más</a>
                 </div>
             </div>
+
             <div class="bloog-1">
                 <img src="images/b3.jpg" alt="">
                 <div class="bloog-txt">
